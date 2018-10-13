@@ -10,6 +10,15 @@ namespace PasswordGen
   {
     static void Main(string[] args)
     {
+      string folderName = @"c:\Users\blrus\Documents";
+
+      string fileName = "newPassword.txt";
+
+      var pathString = System.IO.Path.Combine(folderName, fileName);
+
+      Guid g;
+      g = Guid.NewGuid();
+      System.IO.File.WriteAllText(pathString, g.ToString());
     }
   }
 }
